@@ -2,3 +2,4 @@ STLink Virtual COM Port(COM5)
 Exercise 1.3
 - Changed line 19 (i <= exp  -> i < exp)
 - Changed int8_t to int16_t, to be able to represnt integers above 256
+this is a test
