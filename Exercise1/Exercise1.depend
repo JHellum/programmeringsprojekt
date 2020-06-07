@@ -189,7 +189,7 @@
 	"stm32f30x_wwdg.h"
 	"stm32f30x_rcc.h"
 
-1591284894 source:c:\users\jacob hellum\desktop\programmeringsprojekt\exercise1\src\main.c
+1591529782 source:c:\users\jacob hellum\desktop\programmeringsprojekt\exercise1\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"

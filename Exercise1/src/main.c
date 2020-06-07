@@ -24,38 +24,101 @@ r *= a;
 return(r);
 }
 
-
 void window(int x1, int y1, int x2, int y2, char *head, int style){
+
+    int cornertl;
+    int cornertr;
+    int cornerbl;
+    int cornerbr;
+
+    int lineh;
+    int linev;
+
+    int t1;
+    int t2;
+
+    if(style>0){
+        cornertl=201;
+        cornertr=187;
+        cornerbl=200;
+        cornerbr=188;
+
+        linev = 186;
+        lineh = 205;
+
+        t1 = 185;
+        t2 = 204;
+    }else{
+        cornertl=218;
+        cornertr=191;
+        cornerbl=192;
+        cornerbr=217;
+
+        linev = 179;
+        lineh = 196;
+
+        t1 = 180;
+        t2 = 195;
+    }
+
+    if(x1<1||x2<1||y1<1||y2<1){
+        x1=1;
+        x2=1;
+        y1=1;
+        y2=1;
+    }
+
+    if(x1>x2){
+        int dummy=x1;
+        x1=x2;
+        x2=dummy;
+    }
+    if(y1>y2){
+        int dummy=y1;
+        y1=y2;
+        y2=dummy;
+    }
+
+    int headlength=strlen(head);
+
+    if(x2-x1<headlength+4){
+        x2=x1+headlength+3;
+    }
+
+    if(y2-y1<2){
+        y2=y1+1;
+    }
+
     int width  = x2-x1;
     int height = y2-y1;
-    //printf("12345678901234567890");
-    //printf("1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n");
-    //
+
+
+    //topline print
     gotoxy(x1,y1);
-    printf("%c%c", 201,185);
+    printf("%c%c", cornertl,t1);
     color(0,7);
     printf("%s",head);
     color(15,0);
-    for(int i=0; i<=width-4-strlen(head);i++){
+    for(int i=0; i<=width-4-headlength;i++){
         printf(" ");
     }
-    printf("%c%c", 204,187);
+    printf("%c%c", t2,cornertr);
 
+    //bottomline print
     gotoxy(x1,y2);
-        printf("%c",200);
+        printf("%c",cornerbl);
     for(int i=0; i<=width-2;i++)
-        printf("%c",205);
-        printf("%c",188);
+        printf("%c",lineh);
+        printf("%c",cornerbr);
 
+    //side print
     for(int i=1;i<height;i++){
         gotoxy(x1,y1+i);
-        printf("%c",186);
+        printf("%c",linev);
         gotoxy(x2,y1+i);
-        printf("%c",186);
+        printf("%c",linev);
     }
 
-
-  //  for(int i = x1; x1<)
 
 }
 
@@ -65,9 +128,11 @@ int main(void)
 uart_init( 9600 ); // Initialize USB serial at 9600 baud
 clrscr();
 //(15,0);
-window(2,2,14,14, "Hejsa",1);
+window(2,2,2,2, "Hejsa",1);
 
-window(6,15,21,25, "REEE",1);
+window(3,5,8,16, "REEEEEEEEE",0);
+
+window(-1,0,0,0,"Test",1);
 }
 
 /*int16_t a;
