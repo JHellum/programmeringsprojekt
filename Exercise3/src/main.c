@@ -59,7 +59,6 @@ void rotateVector(vector_t *vec, int32_t v){
 }
 
 
-
 int main(void)
 {
     uart_init( 9600 );

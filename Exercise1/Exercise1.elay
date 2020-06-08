@@ -16,13 +16,12 @@
 			<Cursor1 position="2255" topLine="40" />
 		</Cursor>
 	</File>
-	<File name="src\main.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\main.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="471" topLine="0" />
+			<Cursor1 position="630" topLine="9" />
 		</Cursor>
 		<Folding>
 			<Collapse line="18" />
-			<Collapse line="26" />
 			<Collapse line="39" />
 		</Folding>
 	</File>
