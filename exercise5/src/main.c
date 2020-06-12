@@ -154,7 +154,7 @@ int main(void)
     initLed();
   while(1)
   {
-    clrscr();
+    gotoxy(1,1);
 
     switch(readJoystick()){
         case 1: printf("UP!"); break;
